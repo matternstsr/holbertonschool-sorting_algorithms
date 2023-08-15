@@ -8,15 +8,15 @@
  */
 void quick_sort(int *array, size_t size)
 {
-    int low = 0, high = 0;
+	int low = 0, high = 0;
 
-    if (size <= 1 || array == NULL || size == 0)
-        return;
+	if (size <= 1 || array == NULL || size == 0)
+		return;
 
-    low = 0;
-    high = size - 1;
+	low = 0;
+	high = size - 1;
 
-    recursive_quick_sort(array, low, high, size);
+	recursive_quick_sort(array, low, high, size);
 }
 
 /**
@@ -29,28 +29,28 @@ void quick_sort(int *array, size_t size)
  */
 int lomuto_partition(int *arr, int lo, int hi, size_t size)
 {
-    int pivot = 0;
-    int i = 0, j = 0;
-    size_t tmp;
+	int pivot = 0;
+	int i = 0, j = 0;
+	size_t tmp;
 
-    pivot = arr[hi];
-    i = lo - 1;
+	pivot = arr[hi];
+	i = lo - 1;
 
-    for (j = lo; j <= hi; j++)
-    {
-        if (arr[j] <= pivot)
-        {
-            i += 1;
-            if (i != j)
-            {
-                tmp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = tmp;
-                print_array(arr, size);
-            }
-        }
-    }
-    return i;
+	for (j = lo; j <= hi; j++)
+	{
+		if (arr[j] <= pivot)
+		{
+			i += 1;
+			if (i != j)
+			{
+				tmp = arr[j];
+				arr[j] = arr[i];
+				arr[i] = tmp;
+				print_array(arr, size);
+			}
+		}
+	}
+	return i;
 }
 
 /**
@@ -63,14 +63,14 @@ int lomuto_partition(int *arr, int lo, int hi, size_t size)
  */
 void recursive_quick_sort(int *arr, int low, int high, size_t size)
 {
-    int pivot_index = 0;
+	int pivot_index = 0;
 
-    if (low < high)
-    {
-        pivot_index = lomuto_partition(arr, low, high, size);
+	if (low < high)
+	{
+		pivot_index = lomuto_partition(arr, low, high, size);
 
-        recursive_quick_sort(arr, low, pivot_index - 1, size);
-        recursive_quick_sort(arr, pivot_index + 1, high, size);
-    }
+		recursive_quick_sort(arr, low, pivot_index - 1, size);
+		recursive_quick_sort(arr, pivot_index + 1, high, size);
+	}
 }
 
