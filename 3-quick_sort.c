@@ -37,7 +37,7 @@ int partition(int arr[], int lo, int hi)
  */
 void quick_sort(int *array, size_t size)
 {
-	int stack[size];
+	int stack[100];
 	int top = -1;
 	int high, low, pi;
 
