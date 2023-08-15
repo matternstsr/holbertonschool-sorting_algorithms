@@ -32,7 +32,7 @@ void insertion_sort_list(listint_t **list);
 void quick_sort(int *array, size_t size);
 
 /* OTHER Prototypes */
-int partition(int arr[], int lo, int hi);
-
+void recursive_quick_sort(int *arr, int low, int high, size_t size);
+int lomuto_partition(int *arr, int lo, int hi, size_t size);
 
 #endif /* SORT_H */
