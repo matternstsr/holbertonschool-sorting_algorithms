@@ -25,4 +25,11 @@ void print_array(const int *array, size_t size);
 /* MAIN Prototypes */
 void selection_sort(int *array, size_t size);
 void bubble_sort(int *array, size_t size);
+void insertion_sort_list(listint_t **list);
+void quick_sort(int *array, size_t size)
+
+/* OTHER Prototypes */
+int partition(int arr[], int lo, int hi)
+
+
 #endif /* SORT_H */

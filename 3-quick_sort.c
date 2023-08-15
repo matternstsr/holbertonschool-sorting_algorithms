@@ -13,7 +13,7 @@ void quick_sort(int *array, size_t size)
 	int low = stack[top--];
 	int pi;
 	int stack[size];
-		int top = -1;
+	int top = -1;
 
 	if (size <= 1 || array == NULL || size == 0)
 		return;
@@ -66,9 +66,8 @@ int partition(int arr[], int lo, int hi)
 	{
 		if (arr[j] <= pivot)
 	{
-			i++;
-			quick_sort(&arr[i], &arr[j]);
-		}
+		i++;
+		quick_sort(&arr[i], &arr[j]);
 	}
 	quick_sort(&arr[i + 1], &arr[hi]);
 	return i + 1;
