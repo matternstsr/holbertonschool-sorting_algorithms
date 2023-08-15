@@ -12,19 +12,22 @@ int partition(int arr[], int lo, int hi)
 {
 	int pivot = arr[hi];
 	int i = lo - 1;
+	int j = lo;
+	int temp = arr[i];
 
-	for (int j = lo; j <= hi - 1; j++)
+
+	for (j = lo; j <= hi - 1; j++)
 	{
 		if (arr[j] <= pivot)
 	{
 			i++;
-			int temp = arr[i];
+			temp = arr[i];
 			arr[i] = arr[j];
 			arr[j] = temp;
 		}
 	}
 
-	int temp = arr[i + 1];
+	temp = arr[i + 1];
 	arr[i + 1] = arr[hi];
 	arr[hi] = temp;
 
