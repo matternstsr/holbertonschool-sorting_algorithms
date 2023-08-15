@@ -50,7 +50,7 @@ int lomuto_partition(int *arr, int lo, int hi, size_t size)
 			}
 		}
 	}
-	return i;
+	return (i);
 }
 
 /**
