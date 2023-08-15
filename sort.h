@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stddef.h> 
 
 /**
  * struct listint_s - Doubly linked list node
@@ -28,10 +29,10 @@ void print_array(const int *array, size_t size);
 void selection_sort(int *array, size_t size);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
-void quick_sort(int *array, size_t size)
+void quick_sort(int *array, size_t size);
 
 /* OTHER Prototypes */
-int partition(int arr[], int lo, int hi)
+int partition(int arr[], int lo, int hi);
 
 
 #endif /* SORT_H */
