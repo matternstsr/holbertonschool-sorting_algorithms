@@ -7,23 +7,24 @@
  * @hi: The higher index.
  * Return: Pivot index.
  */
+
 int partition(int arr[], int lo, int hi)
 {
-	int pivot, i, j, temp;
+	int pivot = arr[hi];
+	int i = lo - 1;
 
-	pivot = arr[hi];
-	i = lo - 1;
-
-	for (j = lo; j <= hi - 1; j++) {
-		if (arr[j] <= pivot) {
+	for (int j = lo; j <= hi - 1; j++)
+	{
+		if (arr[j] <= pivot)
+	{
 			i++;
-			temp = arr[i];
+			int temp = arr[i];
 			arr[i] = arr[j];
 			arr[j] = temp;
 		}
 	}
 
-	temp = arr[i + 1];
+	int temp = arr[i + 1];
 	arr[i + 1] = arr[hi];
 	arr[hi] = temp;
 
